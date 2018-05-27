@@ -9,10 +9,10 @@ class Tile
   end
 
   def to_s
-    if @revealed
+    if @value.to_s == "0" && @revealed
+      " "
+    elsif @revealed
       @value.to_s
-    elsif @value == "B"
-      "B"
     else
       @flagged ? 'F' : '*'
     end

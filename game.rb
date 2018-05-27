@@ -9,6 +9,7 @@ class Game
 
   def play
     until won? || lost?
+      system "clear"
       @board.render
       pos = parse_pos(get_pos)
       action = get_action

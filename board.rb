@@ -64,7 +64,6 @@ class Board
 
     POSITION_DIFF.each do |diff|
       new_pos = [pos[0] + diff[0], pos[1] + diff[1]]
-      # debugger if pos == [1,1]
       if in_bounds?(new_pos)
         reveal_adj_rec(new_pos)
       end
@@ -86,6 +85,7 @@ class Board
     puts
     (0...@length).each do |row|
       print "#{row} "
+
       (0...@length).each do |col|
         print "#{@grid[row][col].to_s} "
       end
